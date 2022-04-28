@@ -8,8 +8,9 @@ html{
 }
 body{
     
-    background-image: url(../Imagenes/fondo.jpg);
+    background-image: url(../Imagenes/fondo1.jpeg);
     background-size: cover;
+    background-attachment: fixed;
     
 
 
@@ -36,15 +37,20 @@ body{
 /*luego numero de columnas y filas que tendra nuestra grilla y un espacio de separacion*/
     /*border: 1px solid #000; */
     grid-template-columns: 100px auto 100px;
-    grid-template-rows: repeat(6,100px);
+    grid-template-rows: repeat(13,100px);
     grid-gap: 1rem;
     margin-top: 15px;
 /*definir como queremos que cada area sea acomodada en nuestro layout*/
     grid-template-areas: 
     "header header header"
     "header header header" 
-    "nav main main"
-    "nav main main"
+    "nav nav nav"
+    "main main main"
+    "main main main"
+    "main2 main2 main2"
+    "main2 main2 main2"
+    "main2 main2 main2"
+    "main2 main2 main2"
     "main2 main2 main2"
     "main2 main2 main2"
     "main2 main2 main2"
@@ -53,13 +59,10 @@ body{
 }
 /*definir el area que ocupara cada caja de nuestro contenedor, primero le asugnaremos un nombre y un color caracteristico*/
 .box-1{
-    
+    height: 200px;
     grid-area: header;
-   /* border: 2px solid #000;
+    /*border: 2px solid #000;
     background-color: red; */
-    background-image: url(/Imagenes/fondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
 }
 /*------.............---Inicio encabezado------------...-------*/
 
@@ -120,6 +123,7 @@ header img{
 /*---------------------fin encabezado-------------------------------*/
 
 .box-2{
+    height: 50px;
     grid-area: nav;
     /*border: 2px solid #000;
     background-color: violet; */
@@ -130,24 +134,30 @@ header img{
     /* background-color: aqua;
     border: 2px solid #000;*/
     border-radius: 1em;
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .nav ul{
+    width: 243px;
     background-color: rgb(176, 167, 129,0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  /*  border: 2px solid black;*/
     font-family: 'Anek Odia', sans-serif;
     font-family: 'Babylonica', cursive;
     font-family: 'BIZ UDPMincho', serif;
-    
+    height: 2rem;
     
 }
 .nav > ul{ 
-    margin-left: 12px;
-    margin-top: 17px;
-    height: 160px;
-    width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  /*  margin-left: 12px;*/
+    margin-top: 20px;
+    height: 2rem;
+    /*width: 100%;*/
     list-style: none;
     line-height: 2rem;
     border-radius: 1em;
@@ -158,18 +168,18 @@ header img{
     display: none; 
     list-style: none;
     line-height: 2rem;
-    margin-left: 84px;
-    margin-top: -32px;
     background-color: rgb(176, 167, 129,0.9);
+    height: 128px;
 }
 .nav > ul > li{
 
     border-radius: 10px;
-    font-size: 15.3px;
+    font-size: 11px;
 }
 .nav ul li{
-    font-size: 14px;
-    padding-inline: 15px;
+    
+    font-size: 11px;
+    padding-inline: 14px;
 }
 .nav  li  ul{
     width: 150px;
@@ -194,9 +204,10 @@ header img{
 }
 /*--------------------FIN MENÚ----------------------*/
 .box-3{
+    height: 250px;
     grid-area: main;
-    /* border: 2px solid #000;
-    background-color: green; */
+    /*border: 2px solid #000;
+    background-color: green;*/
 }
 /*--------------inicio main----------------------------*/
 
@@ -301,6 +312,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     font-family: "Quicksand" , sans-serif;
     padding-top: 10px;
 }
@@ -387,8 +399,10 @@ form > h2{
     color: rgb(0,0,0,0.5);
 }
 .button{
+    
+    align-items: center;
     border:none;
-    width: 95%;
+    width: 100%;
     color:white;
     font-size: 20px;
     background: rgb(176, 167, 129,0.8);
@@ -396,9 +410,20 @@ form > h2{
     border-radius: 10px;
     cursor: pointer;
 }
+
 .button:hover{
     background: cadetblue;
 }
+.sit{
+    width: 100%;
+    
+    border: none;
+    background: none;
+    outline: none;
+    color:#000;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+}/*bien*/
 p{
     font-size: 13px;
     text-align: center;
@@ -439,7 +464,7 @@ p{
 }
 /*----------------fin cumplido------------------*/
 .box-4{
-    
+    height: 800px;
     grid-area: main2;
     /*border: 2px solid #000;
     background-color: yellow; */
@@ -449,19 +474,17 @@ p{
 /*---------Inicio main2------------------*/
 
 .section2{
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
-    
+    align-items: center;  
 } 
 .tex{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: 11px;
     padding: 15px;
     padding-bottom: 30px;
     font-family: 'Anek Odia', sans-serif;
@@ -470,7 +493,7 @@ p{
     font-family: 'Quicksand', sans-serif;
 }
 .home{
-    margin-top: -20px;
+    margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 25px;
 }
@@ -487,7 +510,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 40px;
     
 }
 /*------------Inicio CONTENEDOR PRODUCTO---------------*/
@@ -579,10 +602,7 @@ h4{
     padding-left: 20px;
 }
 
-.con-{
-    height: 500px;
-    
-}
+
 
 /*--------------FIN BLOQUE INFO CONTACTO--------------*/
 
@@ -606,18 +626,19 @@ h4{
 
 .box-5{
     grid-area: footer;
-/*  border: 2px solid #000;
+    /*border: 2px solid #000;
     background-color: lightgray; */
     font-size: 10px;
-    
 }
 .quienes-fot{
-    margin-top: 100px;
+    margin-top: 150px;
 }
-
+.con-fot{
+    margin-top: 7500px;
+}
 footer{
     padding: 7px;
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Rubik', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
@@ -632,7 +653,7 @@ footer{
         justify-content: center;
         font-size: 30px;
         letter-spacing: 15px;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
     .redes a{
@@ -653,12 +674,14 @@ footer{
 @media only screen and (min-width:768px){
 .container{
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(14,100px);
+    
     
 }
 /*Luego cambiar la disposicion de los items, esta vez usando el recurso de grid-row y grid-column , que es el metodo corto de grid-row-start/end grid-column-start/end*/
 .box-1{
-  /*  margin-bottom: 20px;
-    background-color: red; */
+    margin-bottom: 20px;
+   /* background-color: red;*/
     grid-row:1/3;
     grid-column: 1/5;
 }
@@ -666,7 +689,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 20px;
     font-size:20px;
     font-family: 'Anek Odia', sans-serif;
     font-family: 'Bebas Neue', cursive;
@@ -677,8 +700,8 @@ footer{
 }
 .box-2{
    /* background-color: violet; */
-    grid-row:3/5;
-    grid-column: 1/3;
+    grid-row:3/4;
+    grid-column: 1/5;
 }
 /*-------------COMIENZO MENÚ------------------*/
 .nav{
@@ -686,49 +709,52 @@ footer{
     /* background-color: aqua;
     border: 2px solid #000;*/
     border-radius: 1em;
-    
-}
-.nav ul{
-    background-color: rgb(176, 167, 129,0.9);
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav ul{
+    width: 290px;
+    background-color: rgb(176, 167, 129,0.5);
+    /*border: 2px solid black;*/
     font-family: 'Anek Odia', sans-serif;
     font-family: 'Babylonica', cursive;
     font-family: 'BIZ UDPMincho', serif;
-    
+    height: 2rem;
     
 }
 .nav > ul{ 
-    margin-left: 5%;
-    margin-top: 10px;
-    height: 200px;
-    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  /*  margin-left: 12px;*/
+    margin-top: 20px;
+    height: 2rem;
+    /*width: 100%;*/
     list-style: none;
-    line-height: 3rem;
+    line-height: 2rem;
     border-radius: 1em;
-    background-color: rgb(176, 167, 129,0.5);
 }
 
 .nav ul ul{
     position: absolute;
     display: none; 
     list-style: none;
-    line-height: 3rem;
-    margin-left: 80px;
-    margin-top: -48px;
+    line-height: 2rem;
+    background-color: rgb(176, 167, 129,0.9);
+    height: 128px;
 }
 .nav > ul > li{
 
     border-radius: 10px;
-    font-size: 15.3px;
-
+    font-size: 11px;
 }
 .nav ul li{
-    font-size: 14px;
-    padding-inline: 10px;
-
+    
+    font-size: 15px;
+    padding-inline: 14px;
 }
 .nav  li  ul{
     width: 150px;
@@ -753,9 +779,9 @@ footer{
 }
 /*--------------------FIN MENÚ----------------------*/
 .box-3{
-   /* background-color: green; */
-    grid-row:3/5;
-    grid-column: 2/5;
+  /* background-color: green; */
+    grid-row:4/6;
+    grid-column: 1/5;
 }
 /*----------inicio main----------------------*/
 .general{
@@ -909,9 +935,9 @@ p{
 /*--------------inicio cumplido----------------*/
 .cumplido{
    /* border: 2px solid red;*/
-    width: 70%;
+    /*width: 70%;*/
     margin-top: 20px;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -926,9 +952,15 @@ p{
 }
 /*----------------fin cumplido------------------*/
 /*----------Inicio CONTENEDOR CONTACTO-------*/
-
+.con-{
+    height: 100px;
+    margin-top: 20px;
+    /*background-color: green;*/
+    grid-row:4/9;
+    grid-column: 1/5;
+}
 .rectangulo{
-    width: 70%;
+    width: 100%;
     height: 500px;
     font-family: "Quicksand" , sans-serif;
     
@@ -945,11 +977,11 @@ p{
 }  
 
 .contacto-todo{
-    width: 60%;
+    width: 300px;
     height: 500px;
-    box-shadow: 0 0 20px 0 rgba(255,255,255,.3);
+    box-shadow: 0 0 20px 0 rgba(255,255,255,.5);
     border-radius: 1em;
-    margin-left: -5%;
+    
     
     
     
@@ -1000,6 +1032,8 @@ p{
     height: 200px;
     border-radius: 1em;
     color: #000;
+    /*border: 2px solid red;*/
+    margin-top: -10px;
 }
 .contacto-info > ul{
     list-style: none;
@@ -1010,22 +1044,28 @@ p{
     
 }
 
-.con-{
-    height: 500px;
-    
-}
+
 /*-----------Fin contacto-----------*/
 
 /*---------------fin main-------------*/
 .box-4{
+    
+    height: 400px;
     margin-top: 20px;
-   /* background-color: yellow;*/
-    grid-row:5/8;
+  /*  background-color: yellow;*/
+    grid-row:6/13;
     grid-column: 1/5;
 }
 
 /*---------Inicio main2------------------*/
 /*------------INICIO BLOQUE INFO CONTACTO---------------*/
+.con2-{
+    height: 100px;
+    margin-top: 20px;
+    /*background-color: yellow;*/
+    grid-row:9/10;
+    grid-column: 1/5;
+}
 .contacto-info{ /*solo descripcion bot*/
     list-style: none;
     font-family: "Quicksand" , sans-serif;
@@ -1038,7 +1078,7 @@ p{
     height: 120px;
     border-radius: 1em;
     color: #000;
-    margin-top: 400px;
+    
 }
 
 h4{
@@ -1161,15 +1201,16 @@ h1{
 /*------------Fin CONTENEDOR PRODUCTO--------------*/
 /*------fin main2-----------*/
 .box-5{
-  /*  background-color: aquamarine;*/
-    grid-row:8/9;
+    height: 100px;
+   /* background-color: aquamarine;*/
+    grid-row:13/15;
     grid-column: 1/5;
     font-size: 20px;
     margin-top: 50px;
     
 }
 .con-fot{
-    margin-top: 150px;
+    margin-top: 5050px;
 }
 }
 /*fin del css para TABLET*/
@@ -1181,10 +1222,11 @@ h1{
 @media only screen and (min-width: 1024px){
 .container{
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(12,150px);
 }
 .box-1{
-    grid-row:1/2;
-    grid-column: 1/ span 3;
+    grid-row:1/3;
+    grid-column: 1/5;
 }
 .head{
     display: flex;
@@ -1207,79 +1249,10 @@ h1{
     margin-left: 12px;
 }
 
-/*-------------COMIENZO MENÚ------------------*/
-.nav{
-    width: 100%;
-    /* background-color: aqua;
-    border: 2px solid #000;*/
-    border-radius: 1em;
-    margin-top: 35px;
-}
-.nav ul{
-    background-color: rgb(176, 167, 129,0.5);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Anek Odia', sans-serif;
-    font-family: 'Babylonica', cursive;
-    font-family: 'BIZ UDPMincho', serif;
-    
-    
-}
-.nav > ul{ 
-    margin-left: 15px;
-    margin-top: 10px;
-    height: 30px;
-    width: 400px;
-    list-style: none;
-    /*line-height: 2rem;*/
-    border-radius: 1em;
-    
-}
 
-.nav ul ul{
-    position: absolute;
-    display: none; 
-    list-style: none;
-    line-height: 2rem;
-    margin-left: -15px;
-    margin-top: 1px;
-}
-.nav > ul > li{
-
-    border-radius: 10px;
-    font-size: 15.3px;
-}
-.nav ul li{
-    font-size: 14px;
-    padding-inline: 10px;
-}
-.nav  li  ul{
-    width: 150px;
-    text-align: left;
-    border-radius: 1em;
-    padding: 0;
-    border-radius: 10px;
-    
-}
-.nav li:hover{
-    background-color: rgb(104, 122, 123,0.5);
-    border-radius: 20px;
-}
-.nav li:hover ul{
-    display: block;
-    border-radius: 1em;
-}
-.nav a{
-    text-decoration: none;
-    color: #000;
-    display: block;
-}
-/*--------------------FIN MENÚ----------------------*/
 .box-2{
     grid-row: 3/4;
-    grid-column: 2/3;
+    grid-column: 1/5;
 }
 .nav{
     
@@ -1292,20 +1265,30 @@ h1{
     /* background-color: aqua;
     border: 2px solid #000;*/
     border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .nav ul{
+    width: 290px;
     background-color: rgb(176, 167, 129,0.5);
-    display: flex;
-    
+    /*border: 2px solid black;*/
     font-family: 'Anek Odia', sans-serif;
     font-family: 'Babylonica', cursive;
     font-family: 'BIZ UDPMincho', serif;
-    
+    height: 2rem;
     
 }
 .nav > ul{ 
-    height: 32px;
-    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  /*  margin-left: 12px;*/
+    margin-top: 20px;
+    height: 2rem;
+    /*width: 100%;*/
     list-style: none;
     line-height: 2rem;
     border-radius: 1em;
@@ -1316,14 +1299,19 @@ h1{
     display: none; 
     list-style: none;
     line-height: 2rem;
+    background-color: rgb(176, 167, 129,0.9);
+    height: 129px;
+    width: 150px;
 }
 .nav > ul > li{
-    float: left;  
+
     border-radius: 10px;
-    font-size: 15.3px;
+    font-size: 11px;
 }
 .nav ul li{
-    padding-inline: 20px;
+    
+    font-size: 15px;
+    padding-inline: 14px;
 }
 .nav  li  ul{
     width: 150px;
@@ -1348,290 +1336,333 @@ h1{
 }
 /*--------------------FIN MENÚ----------------------*/
 .box-3{
-    grid-row:4/6;
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: column;
-    width: 100%; 
+    /* background-color: green; */
+      grid-row:4/6;
+      grid-column: 1/5;
+  }
+  /*----------inicio main----------------------*/
+  .general{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 1em;
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Rubik', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
+  }
+  .section1{
+      margin-top: 10px;
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      
+      
+  }
+  h2{
+      margin-top: 50px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      margin-top: 10px;
+      font-family: "Quicksand" , sans-serif;
+  }
+  
+  .image{
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 160px;
+      margin-top: 25px;
+  }
+  .image:hover{
+      transform: scale(1.1,1.1);
+  }
+  
+  .about-us{
+      padding-top: 15px;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  .parrafo{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      font-size: 20px;
+      margin: 1%;
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Rubik', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
+  }
+  /*------------COMIENZO DE INICIAR SESION/REGISTRO--------------*/
+  .formulario{
+      width: 100%;
+     /* border: 2px solid #000; */
+      padding: 3px;
+      font-family: 'Anek Odia', sans-serif;
+      font-family: 'BIZ UDPMincho', serif;
+      font-family: 'Noto Serif', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .caja{
+      width: 450px;
+     /* border: 2px solid #000;*/
+      
+      
+  }
+  
+  form > h2{
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 30px;
+  }
+  
+  
+  .input{
+      font-size: 15px;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 1em;
+  }
+  .input-caja{
+      margin-bottom: 15px;
+      /*border: 1px solid #aaa;*/
+  }
+  .icon{
+      padding-bottom: 10px;
+      min-width: 50px;
+      text-align: center;
+      color: rgb(0,0,0,0.5);
+  }
+  .button{
+      
+      align-items: center;
+      border:none;
+      width: 100%;
+      color:white;
+      font-size: 20px;
+      background: rgb(176, 167, 129,0.8);
+      padding: 5px 5px;
+      border-radius: 10px;
+      cursor: pointer;
+  }
+  .button:hover{
+      background: cadetblue;
+  }
+  p{
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 13px;
+      text-align: center;
+      font-family: 'Akshar', sans-serif;
+      font-family: 'Anek Odia', sans-serif;
+      font-family: 'BIZ UDPMincho', serif;
+      font-family: 'Raleway', sans-serif;
+      
+  }
+  .link{
+      text-decoration: none;
+      color: rgb(0, 0, 0,0.6);
+      font-weight: 600;
+  }
+  .link:hover{
+      color: rgba(255,255,255,.4);
+  }
+  /*---------------fin producto---------------*/
+  /*--------------inicio cumplido----------------*/
+  .cumplido{
+     /* border: 2px solid red;*/
+      /*width: 70%;*/
+      margin-top: -60px;
+      /*margin-left: 5%;*/
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+  }
+  .cumpli{
+      
+      font-size: 35px;
+      font-family: 'Ms Madi', cursive;
+  }
+  /*----------------fin cumplido------------------*/
+  /*----------Inicio CONTENEDOR CONTACTO-------*/
+  .con-{
+      height: 100px;
+      margin-top: 20px;
+      /*background-color: green;*/
+      grid-row:4/9;
+      grid-column: 1/5;
+  }
+  .rectangulo{
+      width: 100%;
+      height: 500px;
+      font-family: "Quicksand" , sans-serif;
+      
+      
+  }
+  .logo{ /*titulo Contactanos de arriba*/
+      font-family: "Quicksand" , sans-serif;
+      margin-bottom: 5px;
+      font-size: 30px;
+      color: black;
+      margin-top: 10px;
+      padding-bottom: 10px;
+  
+  }  
+  
+  .contacto-todo{
+      width: 300px;
+      height: 500px;
+      box-shadow: 0 0 20px 0 rgba(255,255,255,.5);
+      border-radius: 1em;
+      
+      
+      
+      
+  }/*bien*/
+  .situs{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .sit{
+      width: 100%;
+      
+      border: none;
+      background: none;
+      outline: none;
+      color:#000;
+      border-bottom: 1px solid black;
+      padding-top: 20px;
+  }/*bien*/
+  .contacto-form{
+      background:  rgb(176, 167, 129,0.5);
+      
+      border-radius: 1em;
+      
+  }
+  .contacto-form form button{
+      background: rgb(176, 167, 129,0.8);
+      text-transform: uppercase;
+      border: 0;
+      padding: 1em;
+      margin-top: 15px;
+      border-radius: 1em;
+  }
+  .contact-form form{
+      height: 50px;
+      margin:0;
+      
+  }
+  .contact-form > form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .contacto-info{
+      text-align: left;
+      width: 100%;
+      height: 200px;
+      border-radius: 1em;
+      color: #000;
+      /*border: 2px solid red;*/
+      margin-top: -10px;
+  }
+  .contacto-info > ul{
+      list-style: none;
+      width: 70%;
+  }
+  .contact-form ul li > span{
+      padding-left: 20px;
+      
+  }
+  
+  
+  /*-----------Fin contacto-----------*/
+  
+  /*---------------fin main-------------*/
+.box-4{
+    
+    height: 400px;
+    margin-top: 20px;
+  /*  background-color: yellow;*/
+    grid-row:6/13;
+    grid-column: 1/5;
+}
+
+/*---------Inicio main2------------------*/
+/*------------INICIO BLOQUE INFO CONTACTO---------------*/
+.con2-{
+    height: 100px;
+    margin-top: 20px;
+    /*background-color: yellow;*/
+    grid-row:8/10;
+    grid-column: 1/5;
     
 }
-/*----------Inicio CONTENEDOR CONTACTO-------*/
-
-.rectangulo{
-    width: 50%;
-    height: 500px;
+.contacto-info{ /*solo descripcion bot*/
+    list-style: none;
     font-family: "Quicksand" , sans-serif;
-    margin-left: 20%;
+    text-align: center;
+   /* border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     align-items: center;
-} /*bien*/
-
-.logo{ /*titulo Contactanos de arriba*/
-    font-family: "Quicksand" , sans-serif;
-    margin-bottom: 5px;
-    font-size: 30px;
-    color: black;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 25%;
-}
-.contacto-todo{
-    width: 50%;
-    height: 500px;
-    box-shadow: 0 0 20px 0 rgba(255,255,255,.3);
-    border-radius: 1em;
-    margin-left: 26%;
-    
-    
-    
-}/*bien*/
-.situs{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sit{
     width: 100%;
-    
-    border: none;
-    background: none;
-    outline: none;
-    color:#000;
-    border-bottom: 1px solid black;
-    padding-top: 20px;
-}/*bien*/
-.contacto-form{
-    background:  rgb(176, 167, 129,0.5);
-    border-radius: 1em;
-}
-.contacto-form form button{
-    background: rgb(176, 167, 129,0.8);
-    text-transform: uppercase;
-    border: 0;
-    padding: 1em;
-    margin-top: 15px;
-    border-radius: 1em;
-}
-.contact-form form{
-    height: 50px;
-    margin:0;
-    
-}
-.contact-form > form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.contacto-info{
-    width: 100%;
-    height: 200px;
+    height: 120px;
     border-radius: 1em;
     color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+}
+
+h4{
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    /*margin-left: -35px;*/
+    margin-bottom: 20px;
 }
 .contacto-info > ul{
     list-style: none;
-    width: 70%;
+    width: 100%;
 }
 .contact-form ul li > span{
     padding-left: 20px;
-    
 }
 
 .con-{
     height: 500px;
     
 }
-/*-----------Fin contacto-----------*/
 
-.about-us{
-    /*padding-top: 15px;*/
-    font-size: 30px;
-    text-align: center;
-    font-family: "Quicksand" sans-serif;
-}
-
-.parrafo{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    font-size: 20px;
-    margin: 1%;
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
-    
-    
-    
-}
-/*------------COMIENZO DE INICIAR SESION/REGISTRO--------------*/
-.formulario{
-    width: 100%;
-    /*border: 2px solid #000;*/
-    padding: 3px;
-    font-family: 'Anek Odia', sans-serif;
-    font-family: 'BIZ UDPMincho', serif;
-    font-family: 'Noto Serif', serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-.caja{
-    width: 450px;
-  /*  border: 2px solid #000; */
-    
-    
-    
-}
-
-form > h2{
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 25px;
-    
-}
-
-
-.input{
-    font-size: 15px;
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 1em;
-}
-.input-caja{
-    margin-bottom: 15px;
-    /*border: 1px solid #aaa;*/
-}
-.icon{
-    padding-bottom: 10px;
-    min-width: 50px;
-    text-align: center;
-    color: rgb(0,0,0,0.5);
-}
-.button{
-    
-    align-items: center;
-    border:none;
-    width: 100%;
-    color:white;
-    font-size: 20px;
-    background: rgb(176, 167, 129,0.8);
-    padding: 5px 5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.button:hover{
-    background: cadetblue;
-}
-p{
-    padding-top: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 13px;
-    text-align: center;
-    font-family: 'Akshar', sans-serif;
-    font-family: 'Anek Odia', sans-serif;
-    font-family: 'BIZ UDPMincho', serif;
-    font-family: 'Raleway', sans-serif;
-    
-}
-.link{
-    text-decoration: none;
-    color: rgb(0, 0, 0,0.6);
-    font-weight: 600;
-}
-.link:hover{
-    color: rgba(255,255,255,.4);
-}
-/*----fin contenedor iniciar sesion /regristro------*/
-/*---------------fin main-------------*/
-
-/*----------inicio main----------------------*/
-.section1 img{
-    width: 600px;
-    height: 300px;
-    
-}
-.image{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 160px;
-    margin-top: 25px;
-    
-}
-.image:hover{
-    transform: scale(1.1,1.1);
-}
-.home{
-    grid-column: 1/4;
-    width: 100%;
-    margin-left: -2px;
-    display: flex;
-    justify-content: center;
-}
-
-/*---------------------------------------------*/
-
-/*--------------inicio cumplido----------------*/
-.cumplido{
-  /*  border: 2px solid red; */
-    width: 80%;
-    margin-top: 20px;
-    margin-left: 10%;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.cumpli{
-    
-    font-size: 40px;
-    font-family: 'Ms Madi', cursive;
-}
-/*----------------fin cumplido------------------*/
-
-.box-4{
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-    grid-row:7/9;
-    grid-column: 1/4;
-}
-.general{  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    /*padding: 10px;*/
-    font-size: 16px;
-    border-radius: 1em;
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Rubik', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.agua{
-    margin-top: -150px;
-}
+/*--------------FIN BLOQUE INFO CONTACTO--------------*/
 .section2{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     
 } 
 .tex{
@@ -1646,10 +1677,9 @@ p{
     font-family: 'Bebas Neue', cursive;
     font-family: 'BIZ UDPMincho', serif;
     font-family: 'Quicksand', sans-serif;
-    
 }
 .home{
-    margin-top: 20px;
+    margin-top: -20px;
     margin-left: 10px;
     margin-bottom: 25px;
 }
@@ -1661,34 +1691,41 @@ p{
     
     
 .video{
-    height: 500px;
+    height: 450px;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
     
 }
+/*-----------fin main2-----------*/
 /*------------Inicio CONTENEDOR PRODUCTO---------------*/
 .contenedor{
-    /*border: 2px solid red;*/
-    width: 140%; 
-    height: 679px; 
+    
+    width: 32%;
+    height: 679px;
     color:black;
     display: flex;
-    margin-left: -159%;
+    flex-flow: column wrap;
+    flex-wrap: wrap;
+    margin: 10px;
 }
-    
-h1{
-    margin-top: -200px;
+.main2producto{
+    margin-top: -250px;
 }
-    
-/*.contenedor div{
-    width: 225px;
+.contenedor div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+/* border: 2px solid #000;*/
+    width: 100%;
     height: 225px;
-}*/
+    margin-bottom: 100px;
+}
 
-/*h1{
+h1{
     text-align: center; 
     font-family: Arial, Helvetica, sans-serif;
     color: black;
@@ -1696,43 +1733,48 @@ h1{
     margin-top: 30px;
     margin-bottom: 0px;
     font-family: "Quicksand" , sans-serif;
-}*/
-/*h2{
+}
+.pad{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    margin-top: 40px;
-    border: 2px solid  rgb(176, 167, 129,0.5);
-    background-color:  rgb(176, 167, 129,0.5);
-    border-radius: 20px;
-    font-family: "Quicksand" , sans-serif;
-}*/
-/*.redes{
+}
+
+.trans:hover{
+    transform: scale(1.2,1.2);
+}
+
+.redes{
     display: flex;
     justify-content: center;
     font-size: 40px;
     letter-spacing: 15px;
     margin-top: 30px;
     margin-bottom: 50px;
-}*/
-/*.redes a{
+}
+.redes a{
     color:#000;
-}*/
+}
 /*------------Fin CONTENEDOR PRODUCTO--------------*/
 /*------fin main2-----------*/
+
 .box-5{
-    grid-row: 9/10;
-    grid-column: 1/4;
+    height: 100px;
+   /* background-color: aquamarine;*/
+    grid-row:13/15;
+    grid-column: 1/5;
+    font-size: 20px;
+    margin-top: 50px;
     
 }
 
-footer{
-    margin-top: 200px;
+.fot-con{
+    margin-top: -500px;
 }
+
 .con-fot{
-    margin-top: 200px;
+    margin-top: 3000px;
 }
 }
 /*---fin del css para Escritorio*/
